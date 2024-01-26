@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="/client_home.css">
+</head>
+<body>
+    <header>
+        <h1>Nashe's Bank</h1>
+    </header>
+    <div class="home">
+        <img th:src="@{/background.jpg}" alt="image unavailable">
+        <div class="pic">
+            <img th:src="@{/home page.jpeg}" alt="image unavailable">
+        </divclass>
+        <p th:object="${user}">
+            Name:
+            <span th:text="*{name}"></span>
+            <br><br>
+            Account Number:
+            <span th:text="*{account_number}"></span>
+            <br><br>
+            Balance: R
+            <span th:text="*{balance}"></span>
+        </p>
+        <div class="actions">
+            <a th:href="@{/bank/transfer}">
+                <button class="button">transfer</button>
+            </a>
+            <a th:href="@{/bank/delete}">
+                <button class="button">delete account</button>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>

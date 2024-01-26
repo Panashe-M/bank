@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transfer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<section class="banner">
+    <img th:src="@{/background.jpg}" alt="image unavailable">
+    <div class="welcome">
+        <h1>EFT</h1>
+        <p>fast and efficient transactions</p>
+    </div>
+    <div class="form">
+        <br>
+        <div th:if="${error}" class="error-message" th:text="${error}"></div>
+
+        <br>
+        <form action="#" th:action="@{/bank/transaction}" method="post">
+
+            <label for="toSendTo">recipient account number: </label>
+            <br>
+            <input type="number" id="toSendTo" name="toSendTo">
+
+            <br><br>
+
+            <label for="amount">amount:</label>
+            <br>
+            <input type="number" id="amount" name="amount">
+
+            <br><br>
+
+            <button type="submit" class="button">transfer</button>
+
+        </form>
+    </div>
+</section>
+</body>
+</html>

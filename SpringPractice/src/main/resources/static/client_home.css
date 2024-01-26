@@ -1,0 +1,39 @@
+body{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+img{
+    position: absolute;
+    height: 94vh;
+    width: 100%;
+}
+p{
+    position: absolute;
+    color: white;
+    top: 300%;
+    left: 6%;
+    scale: 1.9;
+}
+.actions{
+    position: absolute;
+    top: 800%;
+    left: 2%;
+    scale: 1.2;
+}
+.pic img{
+    position: absolute;
+    height: 94vh;
+    width: 70%;
+    padding-left: 30%;
+}
+h1{
+
+    background-color: rgb(59, 3, 59);
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
